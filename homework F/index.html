@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #clock {
+            background-color:seashell;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+        }
+        #dot {
+            background-color:indigo;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            z-index: 1;
+        }
+        #sec {
+            width: 2px;
+            height: 140px;
+            background-color: red;
+            position: absolute;
+            top: 71px;
+            left: 209px;
+            transform-origin: bottom 1px;
+        }
+        #min {
+            width: 5px;
+            height: 120px;
+            background-color: red;
+            position: absolute;
+            top: 91px;
+            left: 207px;
+            transform-origin: bottom 1px;
+        }
+        #hours {
+            width: 10px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 111px;
+            left: 205px;
+            transform-origin: bottom 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="clock">
+        <div id="dot"></div>
+        <div id="sec"></div>
+        <div id="min"></div>
+        <div id="hours"></div>
+    </div>
+    <input type="button" value="Rotate" onclick="rotate()">
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

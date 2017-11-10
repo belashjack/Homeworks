@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        #container {
+            margin: auto;
+            background-color:antiquewhite;
+            width: 95%;
+            height: 550px;
+            z-index: -1;
+        }
+        #bigBall {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            background-color: red;
+            display: inline;
+        }
+        #smallBall {
+            position: absolute;
+            top: 40%;
+            left: 10%;
+            background-color: rgb(196, 150, 23);
+            display: inline;
+        }
+        #hedgehog {
+            position: absolute;
+            top: 30%;
+            left: 40%;
+            background-color: rgb(58, 79, 92);
+            display: inline;
+        }
+        #minion {
+            position: absolute;
+            top: 47%;
+            left: 80%;
+            background-color: rgb(160, 50, 132);
+            display: inline;
+        }
+        #rabbits {
+            position: absolute;
+            top: 50%;
+            left: 60%;
+            background-color: rgb(60, 219, 166);
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <img id="bigBall" src="ball3.png" alt="Ball" width="120px" height="120px">
+        <img id="smallBall" src="ball4.png" alt="Ball" width="90px" height="90px">
+        <img id="hedgehog" src="hedgehog.jpg" alt="hedgehog" width="120px" height="120px">
+        <img id="minion" src="minion.png" alt="minion" width="100px" height="100px">
+        <img id="rabbits" src="rabbits.jpg" alt="rabbits" width="110px" height="110px">
+    </div>
+    <div id="one"></div>
+    <div id="two"></div><br><br><br><br><br><br><br><br>
+    <input type="button" value="Change" onclick="change()" ondblclick="change2()">
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
