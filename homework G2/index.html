@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        #field {
+            background-color: rgb(235, 234, 193);
+            width: 450px;
+            height: 300px;
+        }
+        #left_rocket {
+            background-color: rgb(105, 195, 255);
+            width: 8px;
+            height: 70px;
+            position: absolute;
+            display: inline-block;
+        }
+        #right_rocket {
+            background-color: hotpink;
+            width: 8px;
+            height: 70px;
+            position: absolute;
+            display: inline-block;
+        }
+        #ball {
+            background-color:darkslategrey;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+        }
+        input {
+            margin: 15px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="Start" onclick="startGame(event)">
+    <div id="score">
+        <div id="scoreLeftField"></div><div id="scoreRightField"></div>
+    </div>
+    <div id="field">
+        <div id="left_rocket"></div>
+        <div id="ball"></div>
+        <div id="right_rocket"></div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
