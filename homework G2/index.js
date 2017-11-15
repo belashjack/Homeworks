@@ -7,6 +7,8 @@ let ball = document.getElementById('ball');
 let score = document.getElementById('score');
 let scoreLeftField = document.getElementById('scoreLeftField');
 let scoreRightField = document.getElementById('scoreRightField');
+let ballSound = new Audio;
+ballSound.src = 'http://www.denhaku.com/r_box/sr16/sr16perc/histicks.wav';
 
 let scoreLeft = 0;
 let scoreRight = 0;
@@ -101,18 +103,22 @@ function startGame(event){
         // check intersection with bottom border
         if(ball.getBoundingClientRect().bottom >= field.getBoundingClientRect().bottom) {
             speedY *= -1;
+            ballSound.play();
         }
         // check intersection with top border
         if(ball.getBoundingClientRect().top <= field.getBoundingClientRect().top) {
             speedY *= -1;
+            ballSound.play();
         }
         // check intersection with right rocket
         if (ball.getBoundingClientRect().right >= rightRocket.getBoundingClientRect().left && ball.getBoundingClientRect().top >= rightRocket.getBoundingClientRect().top && ball.getBoundingClientRect().top <= rightRocket.getBoundingClientRect().bottom) {
             speedX *= -1;
+            ballSound.play();
         }
         // check intersection with left rocket
         if (ball.getBoundingClientRect().left <= leftRocket.getBoundingClientRect().right && ball.getBoundingClientRect().top >= leftRocket.getBoundingClientRect().top && ball.getBoundingClientRect().top <= leftRocket.getBoundingClientRect().bottom) {
             speedX *= -1;
+            ballSound.play();
         }
         // check intersection with right border
         if(ball.getBoundingClientRect().right >= field.getBoundingClientRect().right) {
