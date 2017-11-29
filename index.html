@@ -5,15 +5,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <title>Document</title>
     <style>
-        body {
-            font-family: sans-serif;
+        #popupContainer {
+            width: 100%;
+            min-height: 100%;
+            position: fixed;
+            background: rgba(0, 0, 0, 0.15);
+            display: none;
+            overflow:scroll;
+        }
+        #formConteiner {
+            padding: 15px 0px 0px 0px;
+            border-radius: 10px;
+            position: absolute;
+            background: rgba(0, 153, 255, 0.212);
+            left: 25%;
+            top: 20%;
+            box-shadow: 10px -11px 50px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 100px;
+        }
+        @media screen and (max-width: 767px) {
+            #submitBtn, #cancelBtn {
+                margin-bottom: 15px;
+            }
         }
     </style>
 </head>
 
 <body>
+    <div id="popupContainer">
+        <div class="col-sm-7" id="formConteiner">
+            <form name="addNewEmployeeForm">
+                <div class="form-group col-sm-12">
+                    <label for="name" class="col-sm-4 col-form-label">Имя:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="name" placeholder="Name">
+                    </div>
+                </div>
+                <div class="form-group col-sm-12">
+                    <label for="lastname" class="col-sm-4 col-form-label">Фамилия:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="lastname" placeholder="Lastame">
+                    </div>
+                </div>
+                <div class="form-group col-sm-12">
+                    <label for="position" class="col-sm-4 col-form-label">Должность:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="position" placeholder="Position">
+                    </div>
+                </div>
+                <div class="form-group col-sm-12">
+                    <label for="startDate" class="col-sm-4 col-form-label">Дата начала отпуска:</label>
+                    <div class="col-sm-8">
+                        <input type="date" class="form-control" id="startDate" placeholder="Date">
+                    </div>
+                </div>
+                <div class="form-group col-sm-12">
+                    <label for="endDate" class="col-sm-4 col-form-label">Дата конца отпуска:</label>
+                    <div class="col-sm-8">
+                        <input type="date" class="form-control" id="endDate" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group col-sm-12">
+                    <input type="submit" class="btn btn-primary" value="Добавить" id="submitBtn" style="float:left; margin-left: 15px"></input>
+                    <input type="button" class="btn btn-secondary" value="Отмена" id="cancelBtn" style="float:right; margin-right: 15px"></input>
+                    <div class="clearfix"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <input type="button" value="Add new employee" id="addNewEmployee">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="index.js"></script>
 </body>
